@@ -1,0 +1,21 @@
+- baseInfo:
+    api_name: 登录接口
+    url: /dar/user/login
+    method: post
+    header:
+      Content-Type : application/x-www-form-urlencoded;charset=UTF-8
+  testCase:
+    - case_name: 验证登录接口成功
+      data:
+        user_name: test01
+        passwd: admin123
+      extract:
+        token_id : $..token
+      validation:
+        - contains: {'msg':'登录成功'}
+    - case_name: 验证登录接口失败
+      data:
+        user_name: test01
+        passwd: admin124
+      validation:
+        - contains: { 'msg': '参数错误' }

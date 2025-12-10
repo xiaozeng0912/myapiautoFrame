@@ -1,0 +1,9 @@
+2025-12-09 10:42:26,INFO||接口名称为：登录接口
+2025-12-09 10:42:26,INFO||接口请求地址为：http://127.0.0.1:8787/dar/user/login
+2025-12-09 10:42:26,INFO||测试用例名称为：验证登录接口成功
+2025-12-09 10:42:26,INFO||接口请求方式：post
+2025-12-09 10:42:26,INFO||请求头为：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+2025-12-09 10:42:26,INFO||cookies 为：None
+2025-12-09 10:42:26,INFO||请求参数为{'data': {'user_name': 'test01', 'passwd': 'admin123'}}
+2025-12-09 10:42:28,ERROR||HTTPConnectionPool(host='127.0.0.1', port=8787): Max retries exceeded with url: /dar/user/login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EE7E37C890>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2025-12-09 10:42:28,ERROR||'NoneType' object has no attribute 'status_code'

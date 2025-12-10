@@ -1,0 +1,11 @@
+2025-12-04 20:11:48,INFO||接口名称为：登录接口
+2025-12-04 20:11:48,INFO||接口请求地址为：http://127.0.0.1:8787/dar/user/login
+2025-12-04 20:11:48,INFO||测试用例名称为：验证登录接口成功
+2025-12-04 20:11:48,INFO||接口请求方式：post
+2025-12-04 20:11:48,INFO||请求头为：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+2025-12-04 20:11:48,INFO||cookies 为：None
+2025-12-04 20:11:48,INFO||请求参数为{'data': {'user_name': 'test01', 'passwd': 'admin123'}}
+2025-12-04 20:11:48,INFO||接口返回信息: {"error_code":null,"msg":"登录成功","msg_code":200,"orgId":"4140913758110176843","token":"cFB7ED76Df94dcfeeb82b9BabCF7e","userId":"7916868125078745922"}
+2025-12-04 20:11:48,INFO||测试成功
+2025-12-04 20:11:48,INFO||提取接口的返回值：{'token_id': 'cFB7ED76Df94dcfeeb82b9BabCF7e'}
+2025-12-04 20:11:48,INFO||测试成功

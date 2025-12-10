@@ -1,0 +1,32 @@
+2025-12-09 20:13:35,INFO||-----------------接口测试开始---------------------
+2025-12-09 20:13:35,INFO||接口名称为：登录接口
+2025-12-09 20:13:35,INFO||接口请求地址为：http://127.0.0.1:8787/dar/user/login
+2025-12-09 20:13:35,INFO||测试用例名称为：验证登录接口成功
+2025-12-09 20:13:35,INFO||接口请求方式：post
+2025-12-09 20:13:35,INFO||请求头为：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+2025-12-09 20:13:35,INFO||cookies 为：None
+2025-12-09 20:13:35,INFO||请求参数为{'data': {'user_name': 'test01', 'passwd': 'admin123'}}
+2025-12-09 20:13:37,ERROR||HTTPConnectionPool(host='127.0.0.1', port=8787): Max retries exceeded with url: /dar/user/login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000149E9A7F9D0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2025-12-09 20:13:37,ERROR||'NoneType' object has no attribute 'status_code'
+2025-12-09 20:13:37,INFO||-----------------接口测试结束---------------------
+2025-12-09 20:13:37,INFO||-----------------接口测试开始---------------------
+2025-12-09 20:13:37,INFO||接口名称为：登录接口
+2025-12-09 20:13:37,INFO||接口请求地址为：http://127.0.0.1:8787/dar/user/login
+2025-12-09 20:13:37,INFO||测试用例名称为：验证登录接口失败
+2025-12-09 20:13:37,INFO||接口请求方式：post
+2025-12-09 20:13:37,INFO||请求头为：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+2025-12-09 20:13:37,INFO||cookies 为：None
+2025-12-09 20:13:37,INFO||请求参数为{'data': {'user_name': 'test01', 'passwd': 'admin124'}}
+2025-12-09 20:13:39,ERROR||HTTPConnectionPool(host='127.0.0.1', port=8787): Max retries exceeded with url: /dar/user/login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000149E9AD2310>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2025-12-09 20:13:39,ERROR||'NoneType' object has no attribute 'status_code'
+2025-12-09 20:13:39,INFO||-----------------接口测试结束---------------------
+2025-12-09 20:13:39,SUCCESS||
+              各位好，本次XXX智慧物流项目的接口自动化测试结果如下，请注意失败及错误的接口：
+              测试用例总数：2个
+              通过数：0个
+              失败数：2个
+              跳过执行数：0个
+              错误异常：0个
+              测试用例执行时长：4.289560556411743
+              点击查看测试报告：http://192.168.112.59:8088/job/ZHWLXM/138/allure/
+              
