@@ -1,6 +1,6 @@
 allure_python_commons==2.13.1
 jsonpath==0.82
-pytest==6.2.4
+pytest>=7.0.0
 python_jenkins==1.8.0
 PyYAML==6.0
 PyYAML==6.0
