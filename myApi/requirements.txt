@@ -1,10 +1,9 @@
-allure_python_commons==2.13.1
-jsonpath==0.82
-pytest>=7.0.0
-python_jenkins==1.8.0
-PyYAML==6.0
-PyYAML==6.0
-Requests==2.31.0
-urllib3==1.26.15
+allure_python_commons
+jsonpath
+pytest
+python_jenkins
+PyYAML
+Requests
+urllib3
 loguru
 allure-pytest
