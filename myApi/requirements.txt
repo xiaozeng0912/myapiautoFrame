@@ -7,3 +7,4 @@ PyYAML==6.0
 Requests==2.31.0
 urllib3==1.26.15
 loguru
+allure-pytest
