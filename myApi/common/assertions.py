@@ -15,29 +15,29 @@ class Assertions:
                 if assert_value != status_code:
                     flag = flag + 1
                     mylog.error(f'contains断言失败：接口返回码 {status_code} 不等于 {assert_value}')
-                else:
-                    # 
-                    resp_list = jsonpath.jsonpath(response, "$..%s" % assert_key)
-                    if isinstance(resp_list[0], str):
-                        resp_list = ''.join(resp_list)
-                    if resp_list:
-                        # 判断 预期结果中的value值的情况 ： 整型
-                        if isinstance(assert_value, int):
-                            assert_value = assert_value
-                        elif isinstance(assert_value, str):
-                            assert_value = None if assert_value.upper() == 'NONE' else assert_value
-                        if assert_value in resp_list:
-                            mylog.info(f"字符串包含断言成功：预期结果{assert_value}；实际结果-->{resp_list}")
+            else:
+                #
+                resp_list = jsonpath.jsonpath(response, "$..%s" % assert_key)
+                if isinstance(resp_list[0], str):
+                    resp_list = ''.join(resp_list)
+                if resp_list:
+                    # 判断 预期结果中的value值的情况 ： 整型
+                    if isinstance(assert_value, int):
+                        assert_value = assert_value
+                    elif isinstance(assert_value, str):
+                        assert_value = None if assert_value.upper() == 'NONE' else assert_value
+                    if assert_value in resp_list:
+                        mylog.info(f"字符串包含断言成功：预期结果-->{assert_value}；实际结果-->{resp_list}")
 
-                            # 在allure报告中体现
-                            allure.attach(f"预期结果：{assert_value}\n实际结果：{resp_list}", '响应文本断言结果：成功',
-                                          attachment_type=allure.attachment_type.TEXT)
-                        else:
-                            flag = flag + 1
-                            allure.attach(f"预期结果：{assert_value}\n实际结果：{resp_list}", '响应文本断言结果：失败',
-                                          attachment_type=allure.attachment_type.TEXT)
+                        # 在allure报告中体现
+                        allure.attach(f"预期结果：{assert_value}\n实际结果：{resp_list}", '响应文本断言结果：成功',
+                                      attachment_type=allure.attachment_type.TEXT)
+                    else:
+                        flag = flag + 1
+                        allure.attach(f"预期结果：{assert_value}\n实际结果：{resp_list}", '响应文本断言结果：失败',
+                                      attachment_type=allure.attachment_type.TEXT)
 
-                            mylog.error(f"响应文本断言失败：预期结果为{assert_value},实际结果为 {resp_list}")
+                        mylog.error(f"响应文本断言失败：预期结果为{assert_value},实际结果为 {resp_list}")
         return flag
 
     # 等值断言 equal assert validation
